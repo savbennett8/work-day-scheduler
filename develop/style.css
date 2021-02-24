@@ -63,6 +63,13 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
     color: white;
+    vertical-align: middle;
+    display: table-cell;
+  }
+
+  .far {
+    font-size: 40px;
+    /*transform: translateY(-20%);*/
   }
   
   .saveBtn i:hover {
