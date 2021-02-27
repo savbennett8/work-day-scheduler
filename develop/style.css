@@ -11,6 +11,9 @@ body {
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
+    width: inherit;
+    height: inherit;
+    transform: translateY(-32px);
   }
   
   .jumbotron {
@@ -41,6 +44,7 @@ body {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
+    padding: 0;
   }
   
   .past {
@@ -63,8 +67,9 @@ body {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
+    border-color: white;
     color: white;
-    height: 75px;
+    height: 80px;
   }
 
   .far {
@@ -80,4 +85,10 @@ body {
   .flex-container {
     display: flex;
     align-items: flex-start;
+    padding: 0;
+  }
+
+  .col-10 {
+    height: inherit;
+    padding: 0;
   }
