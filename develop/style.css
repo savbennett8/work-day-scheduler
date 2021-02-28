@@ -10,6 +10,8 @@ body {
     resize: none;
     color: #000000;
     border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid white;
     padding: 10px;
     width: inherit;
     height: inherit;
