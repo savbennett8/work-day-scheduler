@@ -9,3 +9,4 @@ When you first open the daily planner, the current day will be displayed at the 
 https://savbennett8.github.io/work-day-scheduler/
 
 
+<img src="./screenshot.jpg">
