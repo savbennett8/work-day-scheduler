@@ -4,28 +4,39 @@ let todaysDate = document.querySelector("#currentDay");
 todaysDate.append(rightNow);
 
 
-let textArea = document.querySelector("textarea");
+let textArea = $("textarea");
 let schedule = [];
 
 
 //i need to select an element and change the color when a certain condition is met
-let changeColor = function() {
-    $(textArea).removeClass("past present future");
-    let blockHour = $(textArea).find("span").text().trim();
-    if (moment().isSame(blockHour, "hour")) {
-        $(textArea).addClass("present");
-    } else if (moment().isBefore(blockHour, "hour")) {
-        $(textArea).addClass("past");
-    } else if (moment().isAfter(blockHour, "hour")) {
-        $(textArea).addClass("future");
+let checkTime = function() {
+    let currentTime = moment().format('H');
+    
+    for (let i = 0; i < textArea.length; i++) {
+        let elementId = textArea[i].id;
+
+        let textId = document.getElementById(textArea[i].id);
+
+        $(textArea[i].id).removeClass(".past .present .future");
+
+        if (elementId < currentTime) {
+            $(textId).addClass("past");
+        } else if (elementId > currentTime) {
+            $(textId).addClass("future");
+        } else if (elementId === currentTime) {
+            $(textId).addClass("present")
+        }
     }
 }
 
-changeColor();
+setInterval(checkTime(), (1000 * 60));
+
+
+
 //I need to have information saved to local storage
 $(".saveBtn").on("click", function() {
     let updatedText = $(this).closest(".row").find("textarea").val();
-    let index = textArea.getAttribute('id');
+    let index = document.getElementById(textArea.id);
     newSchedule = {
         scheduleIndex: index,
         scheduleText: updatedText
@@ -38,8 +49,12 @@ $(".saveBtn").on("click", function() {
     loadSchedule();
 })
 
+
+
+//when the page is refreshed, it needs to load the saved localstorage
 let loadSchedule = function() {
-    schedule = JSON.parse(localStorage.getItem("schedule"));
+    let savedSchedule = localStorage.getItem("schedule");
+    schedule = JSON.parse(savedSchedule);
     //schedule[index] = updatedText;
 }
 
