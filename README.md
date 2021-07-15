@@ -6,13 +6,13 @@ Module 5 weekly challenge assignment. This application is meant to target employ
 When you first open the daily planner, the current day will be displayed at the top of the calendar. The current day will be broken down into hour increments - based on standard business hours. The time-blocks will be color-coded so that you know whether that event is in the past, present or future. You will be able to click on and edit each event, which will be saved to your local storage so you don't lose your progress on browser refresh.
 
 ## Table of Contents
-[Installation](link)
+[Installation](https://github.com/savbennett8/work-day-scheduler/#installation)
 <br>
-[Usage](link)
+[Usage](https://github.com/savbennett8/work-day-scheduler/#usage)
 <br>
-[Contributing](link)
+[Contributing](https://github.com/savbennett8/work-day-scheduler/#contributing)
 <br>
-[Questions](link)
+[Questions](https://github.com/savbennett8/work-day-scheduler/#questions)
 
 ### Installation
 There are no dependencies to run this application, but I used Bootstrap, JQuery, and Moment.js to create it.
