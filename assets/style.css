@@ -72,6 +72,8 @@ body {
     border-color: white;
     color: white;
     height: 80px;
+    display: flex;
+    align-items: flex-end;
   }
 
   .far {
